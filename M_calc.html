@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai-Calculator</title>
+    <style>
+        #main{
+            width: 30%;
+            height: 150px;
+            margin: auto;
+            margin-top: 200px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: rgb(239, 228, 214);
+            border-radius: 10px;
+            text-align: center;
+        }
+        input{
+            background-color: rgb(170, 255, 127);
+        }
+        button{
+            background-color: rgb(155, 211, 211);
+            border: none;
+            width: 70px;
+            height: 30px;
+            border-radius: 2px;
+        }
+        button:hover{
+            width: 60px;
+            height: 30px;
+            background-color: rgb(103, 86, 214);
+            border: none;
+            border-radius: 5px;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div style="padding-top: 30px;display: flex; justify-content: space-evenly;">
+            <input type="text" id="inp1" placeholder="enter 1st Number">
+            <input type="text" id="inp2" placeholder="enter 2nd Number">
+        </div>
+
+        <div style="padding-top: 30px;display: flex; justify-content: space-evenly;">
+            <button onclick="add()">Add</button>
+            <button onclick="sub()">Subtract</button>
+            <button onclick="mul()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+        
+    </div>
+</body>
+<script>
+    function add(){
+        var f_num = parseInt(document.getElementById("inp1").value);
+        var s_num = parseInt(document.getElementById("inp2").value);
+        var sum = f_num + s_num;
+        
+        if (!isNaN(f_num) && !isNaN(s_num)) {
+                alert("The Sum is: " + (f_num + s_num));
+        } else {
+            alert("Please enter valid numbers.");
+        }
+    }
+
+    function sub(){
+        var f_num = parseInt(document.getElementById("inp1").value);
+        var s_num = parseInt(document.getElementById("inp2").value);
+        var sum = f_num - s_num;
+        
+        if (!isNaN(f_num) && !isNaN(s_num)) {
+                alert("The Subtraction is: " + (f_num - s_num));
+        } else {
+            alert("Please enter valid numbers.");
+        }
+    }
+
+    function mul(){
+        var f_num = parseInt(document.getElementById("inp1").value);
+        var s_num = parseInt(document.getElementById("inp2").value);
+        var sum = f_num * s_num;
+        
+        if (!isNaN(f_num) && !isNaN(s_num)) {
+                alert("The Multiplication is: " + (f_num * s_num));
+        } else {
+            alert("Please enter valid numbers.");
+        }
+    }
+
+    function divide(){
+        var f_num = parseInt(document.getElementById("inp1").value);
+        var s_num = parseInt(document.getElementById("inp2").value);
+        var sum = f_num / s_num;
+        
+        if (!isNaN(f_num) && !isNaN(s_num)) {
+                alert("The Division is: " + (f_num / s_num));
+        } else {
+            alert("Please enter valid numbers.");
+        }
+    }
+</script>
+</html>
